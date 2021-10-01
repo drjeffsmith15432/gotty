@@ -45,7 +45,7 @@ type Upgrader struct {
 	// CheckOrigin returns true if the request Origin header is acceptable. If
 	// CheckOrigin is nil, the host in the Origin header must not be set or
 	// must match the host of the request.
-	CheckOrigin func(r *http.Request) bool
+	// CheckOrigin func(r *http.Request) bool
 }
 
 func (u *Upgrader) returnError(w http.ResponseWriter, r *http.Request, status int, reason string) (*Conn, error) {
